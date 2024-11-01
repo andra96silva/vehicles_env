@@ -20,4 +20,6 @@ build_histogram = st.checkbox('Construir un histograma')
 
 if build_histogram:
     st.write('Construir un histograma para la columna odómetro')
-    ...
+
+    fig = px.scatter(car_data, x='odometer', y='price')
+    st.plotly_chart(fig, use_container_widht=True)
